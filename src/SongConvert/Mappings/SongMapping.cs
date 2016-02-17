@@ -1,7 +1,7 @@
-﻿using WindowsApplication1.Entities;
-using FluentNHibernate.Mapping;
+﻿using FluentNHibernate.Mapping;
+using SongConvert.Entities;
 
-namespace WindowsApplication1.Mappings
+namespace SongConvert.Mappings
 {
     internal class SongMapping : ClassMap<Song>
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace WindowsApplication1
+namespace SongConvert
 {
     internal static class CharsetExtensions
     {

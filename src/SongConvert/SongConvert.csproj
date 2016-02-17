@@ -8,7 +8,7 @@
     <ProjectGuid>{F8B8448F-5632-4D41-8C37-4F6C362AEA66}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsApplication1</RootNamespace>
+    <RootNamespace>SongConvert</RootNamespace>
     <AssemblyName>SongConvert</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
@@ -96,6 +96,11 @@
     <Compile Include="ParadoxNamingStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SongConverter.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <SubType>Designer</SubType>
@@ -106,11 +111,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
-using WindowsApplication1.Entities;
 using FluentNHibernate;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate.Cfg;
 using NHibernate.Driver;
 using NHibernate.JetDriver;
+using SongConvert.Entities;
 
-namespace WindowsApplication1
+namespace SongConvert
 {
     internal class EasyWorshipReader
     {

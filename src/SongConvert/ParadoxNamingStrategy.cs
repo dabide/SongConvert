@@ -1,6 +1,6 @@
 using NHibernate.Cfg;
 
-namespace WindowsApplication1
+namespace SongConvert
 {
     internal class ParadoxNamingStrategy : INamingStrategy
     {

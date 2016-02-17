@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WindowsApplication1.Entities
+namespace SongConvert.Entities
 {
     internal class Song
     {

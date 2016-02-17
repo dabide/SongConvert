@@ -2,9 +2,9 @@ using System;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
-using WindowsApplication1.Properties;
+using SongConvert.Properties;
 
-namespace WindowsApplication1
+namespace SongConvert
 {
     public partial class MainForm : Form
     {

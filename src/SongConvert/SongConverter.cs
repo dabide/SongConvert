@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using WindowsApplication1.Entities;
+using SongConvert.Entities;
 
-namespace WindowsApplication1
+namespace SongConvert
 {
     internal class SongConverter
     {
