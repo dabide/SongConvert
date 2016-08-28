@@ -39,13 +39,15 @@ namespace SongConvert
                 progressBar.Value = 0;
 
                 // Initiate asynchronous processing
-                backgroundWorker.RunWorkerAsync();
+                var options = new ProcessingOptions { RemoveHeaders = removeHeadersCheckBox.Checked};
+                backgroundWorker.RunWorkerAsync(options);
             }
         }
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             var worker = (BackgroundWorker) sender;
+            var options = (ProcessingOptions) e.Argument;
 
             var easyWorshipReader = new EasyWorshipReader(easyWorshipSongPath.Text);
             var songs = easyWorshipReader.GetSongs();
@@ -57,7 +59,7 @@ namespace SongConvert
             for (var i = 0; i < songs.Count; i++)
             {
                 var song = songs[i];
-                songConverter.Convert(song);
+                songConverter.Convert(song, options.RemoveHeaders);
 
                 if (worker.CancellationPending)
                 {
@@ -138,5 +140,10 @@ namespace SongConvert
                 destinationPath.Text = Path.GetDirectoryName(openFileDialog.FileName);
             }
         }
+    }
+
+    internal class ProcessingOptions
+    {
+        public bool RemoveHeaders { get; set; }
     }
 }

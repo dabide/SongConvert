@@ -37,6 +37,7 @@ namespace SongConvert
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.convertButton = new System.Windows.Forms.Button();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.removeHeadersCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // easyWorshipSongPath
@@ -102,7 +103,7 @@ namespace SongConvert
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(91, 120);
+            this.progressBar.Location = new System.Drawing.Point(91, 143);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(494, 23);
             this.progressBar.TabIndex = 6;
@@ -110,7 +111,7 @@ namespace SongConvert
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(11, 120);
+            this.convertButton.Location = new System.Drawing.Point(11, 143);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(75, 23);
             this.convertButton.TabIndex = 7;
@@ -125,11 +126,22 @@ namespace SongConvert
             this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // removeHeadersCheckBox
+            // 
+            this.removeHeadersCheckBox.AutoSize = true;
+            this.removeHeadersCheckBox.Location = new System.Drawing.Point(11, 120);
+            this.removeHeadersCheckBox.Name = "removeHeadersCheckBox";
+            this.removeHeadersCheckBox.Size = new System.Drawing.Size(207, 17);
+            this.removeHeadersCheckBox.TabIndex = 8;
+            this.removeHeadersCheckBox.Text = "Remove verse/chorus/bridge headers";
+            this.removeHeadersCheckBox.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 155);
+            this.ClientSize = new System.Drawing.Size(597, 178);
+            this.Controls.Add(this.removeHeadersCheckBox);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.label2);
@@ -156,6 +168,7 @@ namespace SongConvert
         private System.Windows.Forms.ProgressBar progressBar;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private System.Windows.Forms.Button convertButton;
+        private System.Windows.Forms.CheckBox removeHeadersCheckBox;
     }
 }
 
